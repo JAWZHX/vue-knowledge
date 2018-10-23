@@ -7,13 +7,15 @@
 export default {
     name: 'app',
     data () {
+        return {
 
+        }
     }
 }
 </script>
 <style>
 #app {
     text-align: center;
-    color: coral;
+    color: red;
 }
 </style>

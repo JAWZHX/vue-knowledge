@@ -35,6 +35,8 @@ let config = {
 };
 
 if(isDev) {
+    config.devtool = '#cheap-module-eval-source-map';
+
     let devConfig = {
         devServer: {
             overlay: {
@@ -45,6 +47,7 @@ if(isDev) {
         }
     }
     config = Object.assign({}, config, devConfig);
+    
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin()
     );
