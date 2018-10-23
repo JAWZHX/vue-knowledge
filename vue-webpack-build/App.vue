@@ -16,6 +16,6 @@ export default {
 <style>
 #app {
     text-align: center;
-    color: red;
+    color: orangered;
 }
 </style>

@@ -43,11 +43,12 @@ if(isDev) {
                 errors: true
             },
             port: 9000,
-            host: '0.0.0.0'
+            host: '0.0.0.0',
+            hot: true
         }
     }
     config = Object.assign({}, config, devConfig);
-    
+
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin()
     );
