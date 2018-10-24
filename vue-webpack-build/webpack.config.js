@@ -27,6 +27,17 @@ let config = {
                 loader: 'vue-loader'
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/transform-runtime']
+                    }
+                }
+            },
+            {
                 test: /\.css$/,
                 use: [
                     {loader: 'style-loader'},

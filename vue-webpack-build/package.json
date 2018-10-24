@@ -14,9 +14,14 @@
   "author": "1219251709@qq.com",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.1.2",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",

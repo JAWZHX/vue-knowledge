@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <p @click="testClick()">我是{{name}}</p>
-        <img src="~assets/logo.png" alt="logo">
+        <img src="~assets/images/logo.png" alt="logo">
         <div id="bgimg"></div>
     </div>
 </template>
@@ -27,7 +27,7 @@ export default {
     #bgimg {
         width: 300px;
         height: 300px;
-        background-image: url('~assets/panda_16px.png');       
+        background-image: url('~assets/images/panda_16px.png');       
     }
 }
 </style>
