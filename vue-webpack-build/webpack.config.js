@@ -6,9 +6,19 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const isDev = process.env.NODE_ENV == 'production' ? false : true;
 const mode = isDev ? 'development' : 'production';
 
+console.log(__dirname);
+console.log(path.resolve(__dirname, 'src'));
+console.log(path.resolve(__dirname, 'src/assets'));
+
 let config = {
     target: 'web',
     mode: mode,
+    resolve: {
+        alias: {
+            'src': path.resolve(__dirname, 'src'),
+            'assets': path.resolve(__dirname, 'src/assets')
+        },
+    },
     entry: path.join(__dirname, 'index.js'),
     output: {
         filename: 'bundle.js',
@@ -26,6 +36,18 @@ let config = {
                     {loader: 'style-loader'},
                     {loader: 'css-loader'}
                 ]
+            },
+            {
+                test: /\.(jpg|jpeg|gif|png|svg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                            name: '[name][hash:8].[ext]'
+                        }
+                    }
+                ] 
             }
         ]
     },
