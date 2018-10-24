@@ -6,10 +6,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const isDev = process.env.NODE_ENV == 'production' ? false : true;
 const mode = isDev ? 'development' : 'production';
 
-console.log(__dirname);
-console.log(path.resolve(__dirname, 'src'));
-console.log(path.resolve(__dirname, 'src/assets'));
-
 let config = {
     target: 'web',
     mode: mode,
@@ -35,6 +31,14 @@ let config = {
                 use: [
                     {loader: 'style-loader'},
                     {loader: 'css-loader'}
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'},
+                    {loader: 'sass-loader'}
                 ]
             },
             {

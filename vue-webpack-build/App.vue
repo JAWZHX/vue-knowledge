@@ -20,15 +20,14 @@ export default {
     }
 }
 </script>
-<style>
+<style lang="scss" scoped>
 #app {
     text-align: center;
     color: orangered;
-}
-
-#bgimg {
-    width: 300px;
-    height: 300px;
-    background-image: url('~assets/panda_16px.png');       
+    #bgimg {
+        width: 300px;
+        height: 300px;
+        background-image: url('~assets/panda_16px.png');       
+    }
 }
 </style>
