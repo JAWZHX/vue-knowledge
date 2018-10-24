@@ -45,7 +45,8 @@ if(isDev) {
             },
             port: 9000,
             host: '0.0.0.0',
-            hot: true
+            hot: true,
+            https: true
         }
     }
     config = Object.assign({}, config, devConfig);
