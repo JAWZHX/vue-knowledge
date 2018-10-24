@@ -7,6 +7,7 @@ const isDev = process.env.NODE_ENV == 'production' ? false : true;
 const mode = isDev ? 'development' : 'production';
 
 let config = {
+    target: 'web',
     mode: mode,
     entry: path.join(__dirname, 'index.js'),
     output: {
